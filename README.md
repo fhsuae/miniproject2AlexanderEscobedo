@@ -8,8 +8,15 @@
 Miniproject 2 Data Analysis  
 ## Description
  
-This program will use pandas to perform analysis on data sets to answer questions. The program will provide a graph for each of the three data sets and automatically saves them in the charts/ folder. 
- 
+This program uses Pandas to perform analysis on datasets to answer the following questions:
+
+How many movies have a rating of 8.5 or higher?
+
+What is the distribution of adults by gender?
+
+What is the age distribution of individuals in the dataset?
+
+For each dataset, the program generates a graph using Matplotlib and automatically saves the charts as PNG files in the charts/ folder. 
 ## Getting Started
  
 ### Dependencies
