@@ -40,7 +40,7 @@ Alexander Escobedo
 ## Acknowledgments
 
 * [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)
-* [Matplotlib](https://matplotlib.org/stable/tutorials/pyplot.html)
+* [Matplotlib Documentation](https://matplotlib.org/stable/tutorials/pyplot.html)
 * [Health and Lifestyle Dataset – Kaggle Dataset by Chik0di](https://www.kaggle.com/datasets/chik0di/health-and-lifestyle-dataset)
 * [IMDB - Top 250 Movies of All Time – Kaggle Dataset by Arnab Naha Ushna](https://www.kaggle.com/datasets/arnabnahaushna/imdb-top-250-movies-of-all-time)
 * [Adult Income Prediction Dataset – Kaggle Dataset by Mosap Abdel-Ghany](https://www.kaggle.com/datasets/mosapabdelghany/adult-income-prediction-dataset)
