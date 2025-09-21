@@ -24,7 +24,7 @@ plt.title("Number of Movies per Rating 8.5 and Above")
 plt.savefig(str(charts / "movies_high_rating_hist.png"))
 plt.show()
 
-# Number of males vs females
+# Number of males vs. females
 
 df_adult = pd.read_csv("./data/adult.csv", index_col=0)
 
@@ -37,9 +37,9 @@ plt.show()
 
 # Age distribution
 
-df_health = pd.read_csv("./data/health_lifestyle_dataset.csv")  # adjust file path if needed
+df_health = pd.read_csv("./data/health_lifestyle_dataset.csv")
 
-df_health['age'].hist(bins=20, color='skyblue', edgecolor='black')  # histogram
+df_health['age'].hist(bins=20, color='skyblue', edgecolor='black')
 plt.xlabel("Age")
 plt.ylabel("Number of Individuals")
 plt.title("Number of Individuals per Age")
