@@ -11,16 +11,44 @@ charts = Path('charts')
 if not charts.exists():
     Path(r'charts').mkdir()
 
-df = pd.read_excel("./data/IMDB_processed_data.xlsx", index_col=0)
+# Number of movies with rating 8.5 or above
 
-high_rated = df[df["Ratings"] >= 8.0]
+df_IMDB = pd.read_excel("./data/IMDB_processed_data.xlsx", index_col=0)
 
-df["Ratings"].hist(bins=20, edgecolor="black")  # adjust bins as needed
+high_rated = df_IMDB[df_IMDB["Ratings"] >= 8.5]
+
+high_rated["Ratings"].hist(bins=20, edgecolor="black", color = "green")
 plt.xlabel("Ratings")
 plt.ylabel("Number of Movies")
-plt.title("Number of Movies per Rating")
-plt.savefig(str(charts / "movies_rating_hist.png"))
+plt.title("Number of Movies per Rating 8.5 and Above")
+plt.savefig(str(charts / "movies_high_rating_hist.png"))
 plt.show()
+
+# Number of males vs females
+
+df_adult = pd.read_csv("./data/adult.csv", index_col=0)
+
+df_adult['sex'].value_counts().plot(kind='bar', color=['b','m'])
+plt.xlabel("Gender")
+plt.ylabel("Count")
+plt.title("Number of Adults per Gender")
+plt.savefig(str(charts / "adult_gender_count.png"))
+plt.show()
+
+# Age distribution
+
+df_health = pd.read_csv("./data/health_lifestyle_dataset.csv")  # adjust file path if needed
+
+df_health['age'].hist(bins=20, color='skyblue', edgecolor='black')  # histogram
+plt.xlabel("Age")
+plt.ylabel("Number of Individuals")
+plt.title("Number of Individuals per Age")
+plt.savefig(str(charts / "age_distribution.png"))
+plt.show()
+
+
+
+
 
 # This project will be using Pandas dataframes. This isn't intended to be full blown data science project. The goal here is to come up with some question and then see what API or datasets you can use to get the information needed to answer that question. This will get you familar with working with datasets and asking questions, researching APIs and gathering datasets. If you get stuck here, please email me!
 #
@@ -35,6 +63,6 @@ plt.show()
 # (10/10 points) Using matplotlib, graph this data in a way that will visually represent the data. Really try to build some fancy charts here as it will greatly help you in future homework assignments and in the final project.
 # (10/10 points) Save these graphs in a folder called charts as PNG files. Do not upload these to your project folder, the project should save these when it executes. You may want to add this folder to your .gitignore file.
 # (10/10 points) There should be a minimum of 5 commits on your project, be sure to commit often!
-# (10/10 points) I will be checking out the main branch of your project. Please be sure to include a requirements.txt file which contains all the packages that need installed. You can create this fille with the output of pip freeze at the terminal prompt.
+# (10/10 points) I will be checking out the main branch of your project. Please be sure to include a requirements.txt file which contains all the packages that need installed. You can create this file with the output of pip freeze at the terminal prompt.
 # (20/20 points) There should be a README.md file in your project that explains what your project is, how to install the pip requirements, and how to execute the program. Please use the GitHub flavor of Markdown. Be thorough on the explanations.
 
