@@ -6,8 +6,7 @@ import pandas as pd
 
 df = pd.read_excel("./data/IMDB_processed_data.xlsx", index_col=0)
 
-print(df.head())
-
+print(df[['Ratings']].head())
 
 # This project will be using Pandas dataframes. This isn't intended to be full blown data science project. The goal here is to come up with some question and then see what API or datasets you can use to get the information needed to answer that question. This will get you familar with working with datasets and asking questions, researching APIs and gathering datasets. If you get stuck here, please email me!
 #
@@ -24,3 +23,4 @@ print(df.head())
 # (10/10 points) There should be a minimum of 5 commits on your project, be sure to commit often!
 # (10/10 points) I will be checking out the main branch of your project. Please be sure to include a requirements.txt file which contains all the packages that need installed. You can create this fille with the output of pip freeze at the terminal prompt.
 # (20/20 points) There should be a README.md file in your project that explains what your project is, how to install the pip requirements, and how to execute the program. Please use the GitHub flavor of Markdown. Be thorough on the explanations.
+
