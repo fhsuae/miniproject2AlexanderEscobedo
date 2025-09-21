@@ -4,6 +4,12 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+# Create charts folder if it does not exists
+charts = Path('charts')
+if not charts.exists():
+    Path(r'charts').mkdir()
 
 df = pd.read_excel("./data/IMDB_processed_data.xlsx", index_col=0)
 
@@ -13,6 +19,7 @@ df["Ratings"].hist(bins=20, edgecolor="black")  # adjust bins as needed
 plt.xlabel("Ratings")
 plt.ylabel("Number of Movies")
 plt.title("Number of Movies per Rating")
+plt.savefig(str(charts / "movies_rating_hist.png"))
 plt.show()
 
 # This project will be using Pandas dataframes. This isn't intended to be full blown data science project. The goal here is to come up with some question and then see what API or datasets you can use to get the information needed to answer that question. This will get you familar with working with datasets and asking questions, researching APIs and gathering datasets. If you get stuck here, please email me!
